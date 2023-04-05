@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AssetClassPage.css';
 
 function AssetClassPage() {
     //const [assetClasses, setAssetClasses] = useState([]);
@@ -39,7 +40,7 @@ function AssetClassPage() {
     const totalPercentage = selectedAssets.reduce((total, asset) => total + asset.percentage, 0);
 
     return (
-        <div>
+        <div className="container">
             <h1>Asset Class Page</h1>
             <form onSubmit={handleNewAssetClassSubmit}>
                 <label htmlFor="assetClass">Select asset class:</label>
