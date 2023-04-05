@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Docker: Node.js",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker: build",
+            "dockerBuild": {
+                "context": "${workspaceFolder}",
+                "dockerfile": "Dockerfile",
+                "tag": "my-image"
+            },
+            "dockerRun": {
+                "image": "my-image",
+                "ports": [
+                    "3000:3000"
+                ]
+            },
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}

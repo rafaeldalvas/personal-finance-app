@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "docker: build",
+            "type": "shell",
+            "command": "docker build -t personal-finance-app-image .",
+            "problemMatcher": []
+        }
+    ]
+}
